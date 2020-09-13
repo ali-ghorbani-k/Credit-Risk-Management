@@ -8,11 +8,13 @@ I have collected the data from kaggle that was provided by [Home Credit financia
 There are two main sources of data 1)Home Credit 2)Bureau which are presented in seven tables as:
 1. __Home Credit__:
 
-    1. __application_train and application_test__: These two tables includes the information for the each loan application represented by an id of loan (__SK_ID_CURR__).
-    The applicatoin_train table includes a target column (1 : client with payment difficulties: he/she had late payment more than X days on at least one of the first 
-    Y installments of the loan in our sample, 0 : the loan was repaid)     
+    1. __application_train__: These two tables includes the information for the each loan application represented by an id of loan (__SK_ID_CURR__).
+    The applicatoin_train table includes a TARGET column (1 : client with payment difficulties: he/she had late payment more than X days on at least one of the first 
+    Y installments of the loan in our sample, 0 : the loan was repaid) 
+    
+    2. __application_test__: Similar to the application_train, but does not have TARGET column and will be used in kaggle competition.
 
-    2. __previous_application__: This table includes all previous application at Home Credit which represented by an id of loan (__SK_ID_PREV__). One SK_ID_CURR can have 0,1,2     or more related previous credits in previous_application table showing a one-to-many relationship.
+    3. __previous_application__: This table includes all previous application at Home Credit which represented by an id of loan (__SK_ID_PREV__). One SK_ID_CURR can have 0,1,2     or more related previous credits in previous_application table showing a one-to-many relationship.
     
     3. 
 
