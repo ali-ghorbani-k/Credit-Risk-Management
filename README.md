@@ -1,5 +1,5 @@
 # Credit-Risk-Management
-Building an end-to-end machine learning model to predict the probability of paying back a loan by each applicant.
+Building an end-to-end machine learning model to predict the probability of paying back a loan by an applicant.
 
 # Problem Statement 
 This is a supervised binary classification problem since the lables are provided in the application_train table (supervsied), and the lable is a binary variable with 0 (repaying the loan) and 1 (having difficulty repaying the loan).
