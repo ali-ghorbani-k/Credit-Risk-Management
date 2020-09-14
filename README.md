@@ -6,11 +6,11 @@ Building an end-to-end machine learning model to predict the probability of payi
 # Data Collection
 I have collected the data from kaggle that was provided by [Home Credit financial institution]( https://www.kaggle.com/c/home-credit-default-risk/data).
 
-There are two main tables for the current credit application:
+There are two main tables related to the current credit application:
 
-__application_train__: This tables includes the information for the each loan application represented by an id of loan (__SK_ID_CURR__). The applicatoin_train table includes a TARGET column (1 : client with payment difficulties: he/she had late payment more than X days on at least one of the first Y installments of the loan in our sample, 0 : the loan was repaid) 
+* __application_train__: This tables includes the information for the each loan application represented by an id of loan (__SK_ID_CURR__). The applicatoin_train table includes a TARGET column (1 : client with payment difficulties: he/she had late payment more than X days on at least one of the first Y installments of the loan in our sample, 0 : the loan was repaid) 
     
-__application_test__ : This table has the same column as the application_train table, but does not have TARGET column. The TARGET column will be predicted by the           Machine     learning model and could be used in kaggle competition.
+* __application_test__ : This table has the same column as the application_train table, but does not have TARGET column. The TARGET column will be predicted by the           Machine     learning model and could be used in kaggle competition.
     
 There are two main sources of data related to the historical data of each application 1) Bureau 2) Home Credit which are presented in seven tables as:
 
@@ -32,5 +32,6 @@ There are two main sources of data related to the historical data of each applic
     
     4. __installments_payments__ : This table includes repayment history for the previously disbursed credits related to the loans in Home Credit database.
 
+Description of all the columns in all tables will be found in the above provided link.
 
 
