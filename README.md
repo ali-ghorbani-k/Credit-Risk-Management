@@ -42,13 +42,19 @@ The following Entity Relation Diagram (ERD) shows how the data is related:
 As shown in the above ERD each SK_ID_CURR is related to multiple SK_ID_BUREAU in Bureau table and to multiple SK_ID_PREV in Home Credit tables.
 In order to develop machine learning model, first we need to flatten out the database. It means aggregate the information from 2 bureau and 4 Home Credit tables to have one merged table. Each row in the final merged table represents one loan application (SK_ID_CURR). 
 
-Three different strategies have been used in this project to analyze previous loans life cycle and flatten out the database: 
+Three different strategies have been used in this project to flatten out the database: 
 
 1. __Manual feature engineering__
-2. __Automatic feature engineering__
-3. __deep learning__
+2. __Automated feature engineering__
+3. __Deep learning__
 
 # Manual Feature Engineering
+Manual Feature engineering involves leveraging domain knowledge to extract useful feature from data. With this strategy, we analyze each customer journey using bureau and Home Credit sources and extract useful information from previous loans cycle life. 
+
+# Automated feature engineering
+Automated feature engineering use [Featuretools](https://community.alteryx.com/t5/Data-Science/Feature-Engineering-Secret-to-Data-Science-Success/ba-p/545041) library to generate hundreds or thousands of new features.  
+
+
 
 
 
