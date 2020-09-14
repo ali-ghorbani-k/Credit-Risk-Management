@@ -53,14 +53,14 @@ Three different strategies have been used in this project to flatten out the dat
 # Imbalalanced dataset
 The dataset of this problem is significantly imbalanced with 91% of data not-defaulted and 9% being defaulted. The challenge of working with imbalanced dataset is that most machine learning algorithms perform poorly on the minortiy class what is more important to detect in the credit risk management. Three different strategy have been experimented to see their result on the model performance:
 
-1. __Random Undersampling of majority class__: The idea is to undersample the majority class so that we end up having balanced data. We have ~27k positive training data (Mainority class) and ~300k negative data (Majority class). The excessive data from maority class can be randomly removed to have similar number of data for positive and negative class (~27k). This method might lead to information loss which will later harm predictive model performance.
+1. __Clustering Undersampling of majority class__: The idea is to undersample the majority class so that we end up having balanced data. We have ~27k positive training data (Mainority class) and ~300k negative data (Majority class). Undersampling needs to be done in a fashion that the resulted majority class has similar distribution to the original 300k, therefore, we do not lose information from data. Hieracrchial clustering (Agglomerative Clustering) with has been conducted on majority class with 27k cluster. In the end, the resampled dataset had 1:1 data with 27k for positive and negative class.
 
-2. __Clustering Undersampling of majority class__: Undersampling needs to be done in a fashion that the resulted majority class has similar distribution to the original 300k, therefore, we do not lose information from data. Hieracrchial clustering (Agglomerative Clustering) with has been conducted on majority class with 27k cluster. In the end, the resampled dataset had 1:1 data with 27k for positive and negative class.
+2. __Oversampling the minority class__: Alternative way of undersampling, is oversampling the minority class to help the model effectively learn the decision boundary. Synthetic Minority Oversampling Technique (SMOTE) from imblearn library is used to generate synthetic data in this project.
 
-3. __Oversampling the minority class__: Alternative way of undersampling, is oversampling the minority class to help the model effectively learn the decision boundary. Synthetic Minority Oversampling Technique (SMOTE) from imblearn library is used to generate synthetic data in this project.
+3. __Undersampling of majority class & Oversampling of minority class__: It is recommended to combine undersampling of majority class with oversampling to get better performance. In this way, the majority class is reduced from 91% to 50% whereas minority class is enhanced from 9% to 50%. Hierarchial clustering is used for undersampling and SMOTE is used for oversampling.
 
-4. __Undersampling of majority class & Oversampling of minority class__: It is recommended to combine undersampling of majority class with oversampling to get better performance. In this way, the majority class is reduced from 91% to 50% whereas minority class is enhanced from 9% to 50%. Hierarchial clustering is used for undersampling and SMOTE is used for oversampling.
-
+# Machine Learning Models:
+We have tried boosted algorithms [XGBoost, Light GBM, Catboost] https://towardsdatascience.com/catboost-vs-light-gbm-vs-xgboost-5f93620723db, and compared their performance.  
 
 
 
