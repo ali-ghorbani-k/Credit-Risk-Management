@@ -60,7 +60,18 @@ The dataset of this problem is significantly imbalanced with 91% of data not-def
 3. __Undersampling of majority class & Oversampling of minority class__: It is recommended to combine undersampling of majority class with oversampling to get better performance. In this way, the majority class is reduced from 91% to 50% whereas minority class is enhanced from 9% to 50%. Hierarchial clustering is used for undersampling and SMOTE is used for oversampling.
 
 # Machine Learning Models:
-We have tried boosted algorithms [XGBoost, Light GBM, Catboost] https://towardsdatascience.com/catboost-vs-light-gbm-vs-xgboost-5f93620723db, and compared their performance.  
+We have tried boosted algorithms (XGBoost, LightGBM, Catboost) and fully connected neural network (FCNN) in this project. 
+There are some technical differences in the application of different algorithms that needs to noticed:
+
+* __Handling missing data__: XGBoost, LightGBM, and Catboost can handle missing data, but for FCNN the missing needs to be imputed. The missing categorical variable is imputed by 'NotAvailable' new category and missing numerical feature is imputed by average of that column in the training data (to avoid data leakage).
+
+* __Categorical variables__: XGBoost and FCNN can not handle categorical variable, therefore, one-hot encoding is performed on the categorical features. On the other hand, LightGBM and Catboost can handle categorical feature (use Fisher method), but the categorical features should be given to the algorithm to avoid error. This is accomplished by encoding each category to non negative integer and save it astype 'category' in [pandas](https://medium.com/swlh/dealing-with-categorical-variables-in-machine-learning-4401b949b093).
+
+
+
+
+
+
 
 
 
