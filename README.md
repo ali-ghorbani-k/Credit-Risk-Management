@@ -5,22 +5,32 @@ Building an end-to-end machine learning model to predict the probability of payi
 
 # Data Collection
 I have collected the data from kaggle that was provided by [Home Credit financial institution]( https://www.kaggle.com/c/home-credit-default-risk/data).
-There are two main sources of data 1) Bureau 2) Home Credit which are presented in seven tables as:
+
+There are two main tables for the current credit application:
+
+__application_train__: This tables includes the information for the each loan application represented by an id of loan (__SK_ID_CURR__). The applicatoin_train table includes a TARGET column (1 : client with payment difficulties: he/she had late payment more than X days on at least one of the first Y installments of the loan in our sample, 0 : the loan was repaid) 
+    
+__application_test__ : This table has the same column as the application_train table, but does not have TARGET column. The TARGET column will be predicted by the           Machine     learning model and could be used in kaggle competition.
+    
+There are two main sources of data related to the historical data of each application 1) Bureau 2) Home Credit which are presented in seven tables as:
+
+1. __Bureau__:
+
+    1. __Bureau__ : This table includes information for all client's previous credits provided by other financial institution that were reported to Credit Bureau.
+    Each credit in bureau table is represented by a bureau id (__SK_ID_BUREAU__) which is related to the one id of loan application (__SK_ID_CURR__). One SK_ID_CURR can have 
+    0,1,2 or more related previous credits (SK_ID_BUREAU) in bureau table showing a one-to-many relationship.
+    2. __Bureau_balance__ : This table includes information related to the monthly balance of previous credits in Credit Bureau. This table has one row for each month of         history of every previous credit reported to Credit Bureau – i.e the table has (#loans in sample * # of relative previous credits * # of months where we have some history     observable for the previous credits) rows. 
+    
 2. __Home Credit__:
 
-    1. __application_train__: This tables includes the information for the each loan application represented by an id of loan (__SK_ID_CURR__).
-    The applicatoin_train table includes a TARGET column (1 : client with payment difficulties: he/she had late payment more than X days on at least one of the first 
-    Y installments of the loan in our sample, 0 : the loan was repaid) 
+    1. __previous_application__: This table includes all previous application at Home Credit which represented by an id of loan (__SK_ID_PREV__). One SK_ID_CURR can have  
+    0,1,2 or more related previous credits (SK_ID_PREV) in previous_application table showing a one-to-many relationship.
     
-    2. __application_test__: This table has the same column as the application_train table, but does not have TARGET column. The TARGET column will be predicted by the Machine learning model and could be used in kaggle competition.
-
-    3. __previous_application__: This table includes all previous application at Home Credit which represented by an id of loan (__SK_ID_PREV__). One SK_ID_CURR can have 0,1,2     or more related previous credits in previous_application table showing a one-to-many relationship.
+    2. __POS_CASH_BALANCE__: This table includes monthly balance of previous point of sale (POS) with Home Credit.
     
-    4. __POS_CASH_BALANCE__: This table includes monthly balance of previous point of sale (POS) with Home Credit.
+    3. __credit_card_balance__ : This table inlcudes monthly balance snapshots of previous credit cards that the applicant has with Home Credit
     
-    5. __credit_card_balance__ : This table inlcudes monthly balance snapshots of previous credit cards that the applicant has with Home Credit
-    
-    6. __installments_payments__ : This table includes repayment history for the previously disbursed credits related to the loans in Home Credit database.
+    4. __installments_payments__ : This table includes repayment history for the previously disbursed credits related to the loans in Home Credit database.
 
 
 
