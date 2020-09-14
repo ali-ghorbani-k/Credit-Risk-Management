@@ -35,5 +35,9 @@ There are two main sources of data related to the historical data of each applic
 Description of all the columns will be found in HomeCredit_columns_description.csv which is available in the provided link.
 The following Entity Relation Diagram (ERD) shows how the data is related:
 
+![ERD](images/ERD.png)
+
+
+
 
 
