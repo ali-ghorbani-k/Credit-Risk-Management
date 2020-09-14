@@ -38,7 +38,7 @@ The following Entity Relation Diagram (ERD) shows how the data is related:
 
 ![ERD](images/ERD.png)
 
-# Preprocessing of data and Feature Engineering
+# Preprocessing of data
 As shown in the above ERD each SK_ID_CURR is related to multiple SK_ID_BUREAU in Bureau table and to multiple SK_ID_PREV in Home Credit tables.
 In order to develop machine learning model, first we need to flatten out the database. It means aggregate the information from 2 bureau and 4 Home Credit tables to have one merged table. Each row in the final merged table represents one loan application (SK_ID_CURR). 
 
@@ -48,7 +48,7 @@ Three different strategies have been used in this project to analyze previous lo
 2. __Automatic feature engineering__
 3. __deep learning__
 
-1. __Manual Feature Engineering__
+# Manual Feature Engineering
 
 
 
