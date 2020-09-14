@@ -52,7 +52,10 @@ Three different strategies have been used in this project to flatten out the dat
 Manual Feature engineering involves leveraging domain knowledge to extract useful feature from data. With this strategy, we analyze each customer journey using bureau and Home Credit sources and extract useful information from previous loans cycle life. 
 
 # Automated feature engineering
-Automated feature engineering use [Featuretools](https://community.alteryx.com/t5/Data-Science/Feature-Engineering-Secret-to-Data-Science-Success/ba-p/545041) library to generate hundreds or thousands of new features.  
+Automated feature engineering use [Featuretools](https://community.alteryx.com/t5/Data-Science/Feature-Engineering-Secret-to-Data-Science-Success/ba-p/545041) library to generate hundreds or thousands of new features. We have used one level of depth since this is a computationally expensive work.
+
+# Deep learning
+Deep learning strategy employs Convolution Nueral Network (CNN) and Recurrent Neural Network (RNN) to extract new feture from the data. The concept of using power of CNN for the feature engineering is discussed [here](https://towardsdatascience.com/convolutional-neural-network-on-a-structured-bank-customer-data-358e6b8aa759)  
 
 
 
