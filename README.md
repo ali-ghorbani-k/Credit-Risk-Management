@@ -1,9 +1,10 @@
 # Credit-Risk-Management
 Building an end-to-end machine learning model to predict the probability of paying back a loan by each applicant.
 
-# Key Takeaways
+# Problem Statement 
+This is a supervised binary classification problem since the lables are provided in the application_train table (supervsied), and the lable is a binary variable with 0 (repaying the loan) and 1 (having difficulty repaying the loan).
 
-# Data Collection
+# Data 
 I have collected the data from kaggle that was provided by [Home Credit financial institution]( https://www.kaggle.com/c/home-credit-default-risk/data).
 
 There are two main tables related to the current credit application:
@@ -12,7 +13,7 @@ There are two main tables related to the current credit application:
     
 * __application_test__ : This table has the same column as the application_train table, but does not have TARGET column. The TARGET column will be predicted by the           Machine     learning model and could be used in kaggle competition.
     
-There are two main sources of data related to the historical data of each application 1) Bureau 2) Home Credit which are presented in seven tables as:
+There are two main sources of data related to the historical data of each application 1) Bureau 2) Home Credit which are presented in following tables:
 
 1. __Bureau__:
 
@@ -36,6 +37,18 @@ Description of all the columns will be found in HomeCredit_columns_description.c
 The following Entity Relation Diagram (ERD) shows how the data is related:
 
 ![ERD](images/ERD.png)
+
+# Preprocessing of data and Feature Engineering
+As shown in the above ERD each SK_ID_CURR is related to multiple SK_ID_BUREAU in Bureau table and to multiple SK_ID_PREV in Home Credit tables.
+In order to develop machine learning model, first we need to flatten out the database. It means aggregate the information from 2 bureau and 4 Home Credit tables to have one merged table. Each row in the final merged table represents one loan application (SK_ID_CURR). 
+
+Three different strategies have been used in this project to analyze previous loans life cycle and flatten out the database: 
+
+1. __Manual feature engineering__
+2. __Automatic feature engineering__
+3. __deep learning__
+
+1. __Manual Feature Engineering__
 
 
 
