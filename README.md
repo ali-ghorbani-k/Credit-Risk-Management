@@ -11,7 +11,7 @@ There are two main tables related to the current credit application:
 
 * __application_train__: This tables includes the information for the each loan application represented by an id of loan (__SK_ID_CURR__). The applicatoin_train table includes a TARGET column (1 : client with payment difficulties: he/she had late payment more than X days on at least one of the first Y installments of the loan in our sample, 0 : the loan was repaid) 
     
-* __application_test__ : This table has the same column as the application_train table, but does not have TARGET column. The TARGET column will be predicted by the           Machine     learning model and could be used in kaggle competition.
+* __application_test__ : This table has the same column as the application_train, but does not have TARGET column. The TARGET column will be predicted by the           Machine     learning model and could be used in kaggle competition. Application_test is not used in this project.
     
 There are two main sources of data related to the historical data of each application 1) Bureau 2) Home Credit which are presented in following tables:
 
