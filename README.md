@@ -34,7 +34,7 @@ There are two main sources of data related to the historical data of each applic
     4. __installments_payments__ : This table includes repayment history for the previously disbursed credits related to the loans in Home Credit database.
 
 Description of all the columns will be found in HomeCredit_columns_description.csv which is available in the provided link.
-The following Entity Relation Diagram (ERD) shows how the data is related:
+The following Entity Relation Diagram (ERD) shows how different tables are related:
 
 ![ERD](images/ERD.png)
 
