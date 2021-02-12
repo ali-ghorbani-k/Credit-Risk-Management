@@ -20,7 +20,7 @@ There are two main sources of data related to the historical data of each applic
     1. __Bureau__ : This table includes information for all client's previous credits provided by other financial institution that were reported to Credit Bureau.
     Each credit in bureau table is represented by a bureau id (__SK_ID_BUREAU__) which is related to the one id of loan application (__SK_ID_CURR__). One SK_ID_CURR can have 
     0,1,2 or more related previous credits (SK_ID_BUREAU) in bureau table showing a one-to-many relationship.
-    2. __Bureau_balance__ : This table includes information related to the monthly balance of previous credits in Credit Bureau. This table has one row for each month of         history of every previous credit reported to Credit Bureau – i.e the table has (#loans in sample * # of relative previous credits * # of months where we have some history     observable for the previous credits) rows. 
+    2. __Bureau_balance__ : This table includes information related to the monthly balance of previous credits in Credit Bureau. This table has one row for each month of         history of every previous credit reported to Credit Bureau – i.e the table has (#loans in sample, #of relative previous credits, #of months where we have some history     observable for the previous credits) rows. 
     
 2. __Home Credit__:
 
