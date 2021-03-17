@@ -9,7 +9,7 @@ This code can be run with the following steps. This setup assumes you already ha
 1. Create the conda environment: conda env create -f environment_hc.yml
 2. Activate the environment: conda activate hc
 
-All the required methods are included in main.py and model.py. Jupyert notebooks for each algortihms is also provided separately.  
+The required files to run this projects are main.py and model.py. Jupyert notebooks for each algorithms is provided for the reference.  
 
 # Data Source
 I have collected the data from kaggle that was provided by [Home Credit financial institution]( https://www.kaggle.com/c/home-credit-default-risk/data).
