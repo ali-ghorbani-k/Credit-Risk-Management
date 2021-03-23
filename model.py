@@ -26,7 +26,7 @@ warnings.simplefilter(action='ignore', category=ConvergenceWarning)
 from pdb import set_trace as st
 
 
-class classifier(object):
+class classifier:
 
     def __init__(self, args):
         self.ft_maxdep = args.ft_maxdep
