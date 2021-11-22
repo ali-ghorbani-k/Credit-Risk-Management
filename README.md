@@ -43,8 +43,8 @@ The following Entity Relation Diagram (ERD) shows how different tables are relat
 ![ERD](images/ERD.png)
 
 # Preprocessing of data
-As shown in the above ERD each SK_ID_CURR is related to multiple SK_ID_BUREAU in Bureau table and to multiple SK_ID_PREV in Home Credit tables.
-In order to develop machine learning model, first we need to flatten out the database. It means aggregate the information from 2 bureau and 4 Home Credit tables to have one merged table. Each row in the final merged table represents one loan application (SK_ID_CURR). 
+As shown in the above ERD each SK_ID_CURR is related to multiple SK_ID_BUREAU in Bureau tables and to multiple SK_ID_PREV in Home Credit tables.
+In order to develop a machine learning model, first we need to flatten out the database. It means aggregating the information from 2 bureau and 4 Home Credit tables to have one merged table. Each row in the final merged table represents one loan application (SK_ID_CURR). 
 
 Three different strategies have been used in this project to flatten out the database: 
 
@@ -55,7 +55,7 @@ Three different strategies have been used in this project to flatten out the dat
 3. __Deep learning__: Deep learning strategy employs Convolution Neural Network (CNN) and Recurrent Neural Network (RNN) to extract new feture from the data. The concept of using power of CNN for the feature engineering is discussed [here](https://towardsdatascience.com/convolutional-neural-network-on-a-structured-bank-customer-data-358e6b8aa759)  
 
 # Imbalalanced Dataset
-The dataset of this problem is significantly imbalanced with 91% of data not-defaulted and 9% being defaulted. The challenge of working with imbalanced dataset is that most machine learning algorithms perform poorly on the minortiy class that is more important to detect in the credit risk management. Three different strategy have been experimented to see their result on the model performance:
+The dataset of this problem is significantly imbalanced with 91% of data not-defaulted and 9% being defaulted. The challenge of working with an imbalanced dataset is that most machine learning algorithms perform poorly on the minority class that is more important to detect in credit risk management. Three different strategy have been experimented to see their result on the model performance:
 
 1. __Hierarchial clustering (undersampling) of majority class__: The idea is to undersample the majority class so that we end up having balanced data. We have ~27k positive training data (Mainority class) and ~300k negative data (Majority class). Undersampling needs to be done in a fashion that the resulted majority class has similar distribution to the original 300k, therefore, we do not lose information from data. Hieracrchial clustering (Agglomerative Clustering) has been conducted on majority class with 27k cluster. In the end, the resampled dataset had 1:1 data with 27k for positive and negative class.
 
