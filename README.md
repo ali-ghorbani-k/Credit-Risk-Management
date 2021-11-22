@@ -20,8 +20,7 @@ There are two main tables related to the current credit application:
     
 * __application_test__ : This table has the same column as the application_train, but does not have TARGET column. The TARGET column will be predicted by the           Machine     learning model and could be used in kaggle competition. Application_test is not used in this project.
     
-There are two main sources of data related to the historical data of each application 1) Bureau 2) Home Credit which are presented in following tables:
-
+In addition to application_train that includes the current application information, there are two other sources of data related to each customer historical transactions and records obtained from 1) Bureau 2) Home Credit, presented in following tables:
 1. __Bureau__:
 
     1. __Bureau__ : This table includes information for all client's previous credits provided by other financial institution that were reported to Credit Bureau.
