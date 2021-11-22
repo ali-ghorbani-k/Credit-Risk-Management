@@ -55,7 +55,7 @@ Three different strategies have been used in this project to flatten out the dat
 
 2. __Automated feature engineering__: Automated feature engineering use [Featuretools](https://community.alteryx.com/t5/Data-Science/Feature-Engineering-Secret-to-Data-Science-Success/ba-p/545041) library to generate hundreds or thousands of new features. We have used one level of depth since this is a computationally expensive work.
 
-3. __Deep learning__: Deep learning strategy employs Convolution Nueral Network (CNN) and Recurrent Neural Network (RNN) to extract new feture from the data. The concept of using power of CNN for the feature engineering is discussed [here](https://towardsdatascience.com/convolutional-neural-network-on-a-structured-bank-customer-data-358e6b8aa759)  
+3. __Deep learning__: Deep learning strategy employs Convolution Neural Network (CNN) and Recurrent Neural Network (RNN) to extract new feture from the data. The concept of using power of CNN for the feature engineering is discussed [here](https://towardsdatascience.com/convolutional-neural-network-on-a-structured-bank-customer-data-358e6b8aa759)  
 
 # Imbalalanced Dataset
 The dataset of this problem is significantly imbalanced with 91% of data not-defaulted and 9% being defaulted. The challenge of working with imbalanced dataset is that most machine learning algorithms perform poorly on the minortiy class that is more important to detect in the credit risk management. Three different strategy have been experimented to see their result on the model performance:
