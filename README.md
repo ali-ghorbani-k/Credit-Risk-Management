@@ -23,9 +23,7 @@ There are two main tables related to the current credit application:
 In addition to application_train that includes the current application information, there are two other sources of data related to each customer historical transactions and records obtained from 1) Bureau 2) Home Credit, presented in following tables:
 1. __Bureau__:
 
-    1. __Bureau__ : This table includes information for all client's previous credits provided by other financial institution that were reported to Credit Bureau.
-    Each credit in bureau table is represented by a bureau id (__SK_ID_BUREAU__) which is related to the one id of loan application (__SK_ID_CURR__). One SK_ID_CURR can have 
-    0,1,2 or more related previous credits (SK_ID_BUREAU) in bureau table showing a one-to-many relationship.
+    1. __Bureau__ : This table includes information for all client's previous credits provided by other financial institutions that were reported to the Credit Bureau. Each credit in the bureau table is represented by a bureau id (__SK_ID_BUREAU__) which is related to the one id of loan application (__SK_ID_CURR__). One SK_ID_CURR can have  0,1,2 or more related previous credits (SK_ID_BUREAU) in a bureau table showing a one-to-many relationship.
     2. __Bureau_balance__ : This table includes information related to the monthly balance of previous credits in Credit Bureau. This table has one row for each month of         history of every previous credit reported to Credit Bureau – i.e the table has (#loans in sample, #of relative previous credits, #of months where we have some history     observable for the previous credits) rows. 
     
 2. __Home Credit__:
@@ -33,11 +31,11 @@ In addition to application_train that includes the current application informati
     1. __previous_application__: This table includes all previous application at Home Credit which represented by an id of loan (__SK_ID_PREV__). One SK_ID_CURR can have  
     0,1,2 or more related previous credits (SK_ID_PREV) in previous_application table showing a one-to-many relationship.
     
-    2. __POS_CASH_BALANCE__: This table includes monthly balance of previous point of sale (POS) with Home Credit.
+    2. __POS_CASH_BALANCE__: This table includes the monthly balance of previous point of sale (POS) with Home Credit.
     
-    3. __credit_card_balance__ : This table inlcudes monthly balance snapshots of previous credit cards that the applicant has with Home Credit
+    3. __credit_card_balance__ : This table includes the monthly balance snapshots of previous credit cards that the applicant has with Home Credit
     
-    4. __installments_payments__ : This table includes repayment history for the previously disbursed credits related to the loans in Home Credit database.
+    4. __installments_payments__ : This table includes repayment history for the previously disbursed credits related to the loans in the Home Credit database.
 
 Description of all the columns will be found in HomeCredit_columns_description.csv which is available in the provided link.
 The following Entity Relation Diagram (ERD) shows how different tables are related:
