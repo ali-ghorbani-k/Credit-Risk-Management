@@ -28,8 +28,7 @@ In addition to application_train that includes the current application informati
     
 2. __Home Credit__:
 
-    1. __previous_application__: This table includes all previous application at Home Credit which represented by an id of loan (__SK_ID_PREV__). One SK_ID_CURR can have  
-    0,1,2 or more related previous credits (SK_ID_PREV) in previous_application table showing a one-to-many relationship.
+    1. __previous_application__: This table includes all previous application at Home Credit which represented by an id of loan (__SK_ID_PREV__). One SK_ID_CURR can have 0,1,2 or more related previous credits (SK_ID_PREV) in previous_application table showing a one-to-many relationship.
     
     2. __POS_CASH_BALANCE__: This table includes the monthly balance of previous point of sale (POS) with Home Credit.
     
